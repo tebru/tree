@@ -1,0 +1,27 @@
+{
+    "name": "tebru/tree",
+    "description": "A PHP tree data structure.  Allows for referencing nodes by unique key.",
+    "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nate Brunette",
+            "email": "n@tebru.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tebru\\Tree\\": "src/",
+            "Tebru\\Test\\Tree\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "release/1.0.0"
+        }
+    }
+}
