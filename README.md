@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tebru/tree.svg?branch=master)](https://travis-ci.org/tebru/tree)
+
 # Tree Data Structure
 This library aims to provide an object oriented way to create a tree data structure. Each node has a user defined unique id by which it is referenced.
 
