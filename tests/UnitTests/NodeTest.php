@@ -1,6 +1,6 @@
 <?php
 
-namespace Tebru\Test\Tree;
+namespace Tebru\Test\Tree\Storage;
 
 use Tebru\Tree\Node;
 use Tebru\Tree\Tree;

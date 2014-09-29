@@ -3,19 +3,19 @@
 namespace Tebru\Test\Tree;
 
 use Tebru\Tree\Node;
-use Tebru\Tree\NodeCollection;
+use Tebru\Tree\Storage\NodeArrayCollection;
 use Tebru\Tree\Tree;
 
 class NodeCollectionTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var NodeCollection $collection
+     * @var NodeArrayCollection $collection
      */
     private $collection;
 
     protected function setUp()
     {
-        $this->collection = new NodeCollection();
+        $this->collection = new NodeArrayCollection();
     }
 
     protected function tearDown()

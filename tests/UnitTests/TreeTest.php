@@ -3,6 +3,7 @@
 namespace Tebru\Test\Tree;
 
 use Tebru\Tree\Node;
+use Tebru\Tree\Storage\NodeArrayCollection;
 use Tebru\Tree\Tree;
 
 class TreeTest extends \PHPUnit_Framework_TestCase
@@ -14,7 +15,7 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->tree = new Tree();
+        $this->tree = new Tree(new NodeArrayCollection());
     }
 
     protected function tearDown()
