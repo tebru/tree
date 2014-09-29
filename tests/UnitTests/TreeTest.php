@@ -2,11 +2,12 @@
 
 namespace Tebru\Test\Tree;
 
+use PHPUnit_Framework_TestCase;
 use Tebru\Tree\Node;
 use Tebru\Tree\Storage\NodeArrayCollection;
 use Tebru\Tree\Tree;
 
-class TreeTest extends \PHPUnit_Framework_TestCase
+class TreeTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var Tree $collection
@@ -15,11 +16,15 @@ class TreeTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
+        parent::setUp();
+
         $this->tree = new Tree(new NodeArrayCollection());
     }
 
     protected function tearDown()
     {
+        parent::tearDown();
+
         unset($this->tree);
     }
 

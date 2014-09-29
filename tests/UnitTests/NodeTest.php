@@ -2,10 +2,11 @@
 
 namespace Tebru\Test\Tree\Storage;
 
+use PHPUnit_Framework_TestCase;
 use Tebru\Tree\Node;
 use Tebru\Tree\Tree;
 
-class NodeTest extends \PHPUnit_Framework_TestCase
+class NodeTest extends PHPUnit_Framework_TestCase
 {
     public function testIsRootNode()
     {

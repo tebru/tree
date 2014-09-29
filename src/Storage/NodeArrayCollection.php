@@ -33,7 +33,7 @@ class NodeArrayCollection implements NodeStorage
     /**
      * {@inheritdoc}
      */
-    public function toArray()
+    public function getNodes()
     {
         return $this->nodes;
     }
@@ -47,9 +47,11 @@ class NodeArrayCollection implements NodeStorage
     }
 
     /**
+     * This class does not use the $index part of this method
+     *
      * {@inheritdoc}
      */
-    public function add(Node $node)
+    public function add(Node $node, $index = null)
     {
         $this->nodes[$node->getId()] = $node;
 

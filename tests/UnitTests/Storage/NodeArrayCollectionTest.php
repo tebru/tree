@@ -2,11 +2,12 @@
 
 namespace Tebru\Test\Tree;
 
+use PHPUnit_Framework_TestCase;
 use Tebru\Tree\Node;
 use Tebru\Tree\Storage\NodeArrayCollection;
 use Tebru\Tree\Tree;
 
-class NodeCollectionTest extends \PHPUnit_Framework_TestCase
+class NodeCollectionTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var NodeArrayCollection $collection
@@ -15,11 +16,15 @@ class NodeCollectionTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
+        parent::setUp();
+
         $this->collection = new NodeArrayCollection();
     }
 
     protected function tearDown()
     {
+        parent::tearDown();
+
         unset($this->collection);
     }
 
@@ -28,7 +33,7 @@ class NodeCollectionTest extends \PHPUnit_Framework_TestCase
         $node = new Node(Tree::ROOT_NODE_ID);
         $this->collection->add($node);
 
-        $nodes = $this->collection->toArray();
+        $nodes = $this->collection->getNodes();
         $this->assertTrue(is_array($nodes));
     }
 
@@ -48,7 +53,7 @@ class NodeCollectionTest extends \PHPUnit_Framework_TestCase
         $node = new Node(Tree::ROOT_NODE_ID);
         $this->collection->add($node);
 
-        $nodes = $this->collection->toArray();
+        $nodes = $this->collection->getNodes();
         $this->assertTrue(isset($nodes[$node->getId()]));
     }
 
@@ -66,7 +71,7 @@ class NodeCollectionTest extends \PHPUnit_Framework_TestCase
         $this->collection->add($node);
         $this->collection->remove($node->getId());
 
-        $nodes = $this->collection->toArray();
+        $nodes = $this->collection->getNodes();
         $this->assertTrue(empty($nodes));
     }
 

@@ -40,15 +40,16 @@ interface NodeStorage extends IteratorAggregate
      * Uses the node's id as a key for easy access
      *
      * @param Node $node
+     * @param string|null $index
      *
      * @return $this
      */
-    public function add(Node $node);
+    public function add(Node $node, $index = null);
 
     /**
      * Remove the node by its id
      *
-     * @param $nodeId
+     * @param string $nodeId
      *
      * @return $this
      * @throws NodeNotFoundException If node could not be found
@@ -56,10 +57,10 @@ interface NodeStorage extends IteratorAggregate
     public function remove($nodeId);
 
     /**
-     * Return the node collection as an array
+     * Return the nodes
      *
-     * @return array
+     * @return mixed
      */
-    public function toArray();
+    public function getNodes();
 
 } 
